@@ -1,0 +1,149 @@
+body {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	overflow-y: hidden;
+}
+
+.container {
+	max-width: 720px;
+}
+
+#result {
+	
+}
+
+.result-container {
+	border-radius: 7px;
+	background-color: #272727;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.result-container .button {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+input[type=checkbox] {
+	margin-right: 0;
+	height: 20px;
+	width: 20px;
+}
+
+input[type=checkbox]:checked:after {
+	-webkit-appearance: none;
+	margin-right: 0;
+	height: 20px;
+	width: 20px;
+	background-color: blue !important;
+}
+
+
+.field-set {
+	padding-left: 3.5em;
+	padding-right: 3.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+#generate-password {
+	margin-top: 20px;
+}
+
+
+.number-input {
+	text-align: center;
+	border-radius: 7px;
+	width: 60px;
+}
+
+/*REMOVING ARROWS FROM NUMBER INPUT*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Bottom GitHub Button */
+.bottom-github {
+	margin-bottom: 0;
+}
+
+/* bottom-github link */
+.bottom-github {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+#github {
+	margin-left: 3px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #23d160; /* Green background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

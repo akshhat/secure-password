@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Password Generator</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="icon" href="key.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+
+    <section class="hero is-primary is-medium is-fullheight has-background-link">
+          
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container">
+          <div class="box has-background-dark">
+            <h1 class="title is-size-4 has-text-centered has-text-light">Secure Password Generator</h1>
+
+            <div class="result-container">
+            <span id="result" class="has-text-light is-size-5"></span>
+            <button class="button is-link" id="clipboard"><i class="icon far fa-clipboard"></i></button>
+            </div>
+
+            <div class="container has-text-centered">
+            <!-- FORM -->
+            <form id="passwordGeneratorForm" class="form">
+        
+              <div class="field-set field character-amount-container">
+                <label class="has-text-light is-size-5" for="characterAmountNumber">Characters</label>
+                <input class="number-input is-size-5 has-text-dark" type="number" min="1" max="40" value="16" id="characterAmountNumber" class="space">
+              </div>
+
+              <div class="field-set field">
+              <label class="checkbox has-text-light is-size-5 checkbox-label" for="includeUppercase">Include Uppercase</label>
+              <input type="checkbox" id="includeUppercase" class="checkbox-custom">
+              </div>
+              <div class="field-set field">
+              <label class="checkbox has-text-light is-size-5 checkbox-label" for="includeNumbers">Include Numbers</label>
+              <input type="checkbox" id="includeNumbers" class="checkbox-custom">
+              </div>
+              <div class="field-set field">
+              <label class="checkbox has-text-light is-size-5 checkbox-label" for="includeSymbols">Include Symbols</label>
+              <input type="checkbox" id="includeSymbols" class="checkbox-custom">
+              </div>
+
+
+              <button type="submit" id="generate-password" class="button is-link is-size-5">Generate Password</button>
+          
+            </form>
+            </div>
+ 
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <a href="https://github.com/akshhat/secure-password" target="_blank" class="is-size-6 has-text-white bottom-github">View on GitHub <span id="github"><i class="icon is-small fab fa-github"></i></span></a>
+
+    <!-- COPY SNACKBAR -->
+    <div id="snackbar">Password copied to clipboard.</div>
+
+  </body>
+</html>
